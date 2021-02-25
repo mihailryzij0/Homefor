@@ -5,3 +5,15 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+body{
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    font-size: 16px;
+}
+.section-main{
+    background-image: url(../img/bg-main.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
