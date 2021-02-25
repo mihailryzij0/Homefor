@@ -1,0 +1,87 @@
+.header{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-item{
+        display: flex;
+        align-items: center;
+    }
+}
+.nav{
+    display: flex;
+    &-item{
+        list-style-type: none;
+        margin-left: 20px;
+    }
+    &-link{
+         text-decoration: none;
+         color: $white;
+         transition: 0.2s ease;
+         &:hover{
+             color: $gray;
+         }
+    }
+}
+.logo{
+   
+    &-link{
+    background-image: url(../../../img/HOMEFOR.svg);
+    background-size: 138px 23px;
+    width: 200px;
+    height: 90px;
+    background-color: #302d32;
+    background-repeat: no-repeat;
+    background-position: center;
+        display: block;
+    }
+
+}
+.header-item{
+    &__place{
+        position: relative;
+        text-decoration: none;
+        color: $white;
+        transition: 0.2s ease;
+        &:hover{
+            color: $gray;
+        }
+        &::before{
+            content: '' ;
+            position: absolute;
+            background-image: url(../../../img/place.svg);
+            background-repeat: no-repeat;
+            display: block;
+            width: 20px;
+            height: 20px;
+            left: -22px;
+            top: calc(50% - 10px);
+
+        }
+    }
+    &__tel{
+        position: relative;
+        text-decoration: none;
+        color: $white;
+        margin-left: 30px;
+        transition: 0.2s ease;
+        &:hover{
+            color: $gray;
+        }
+        &::before{
+            content: '' ;
+            position: absolute;
+            background-image: url(../../../img/phon.svg);
+            background-repeat: no-repeat;
+            display: block;
+            width: 30px;
+            height: 30px;
+            left: -22px;
+            top: calc(50% - 10px);
+
+        }
+    }
+}
