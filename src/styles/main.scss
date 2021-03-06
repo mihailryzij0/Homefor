@@ -8,9 +8,6 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
-* {
-    outline: 1px solid red;
-    }
 :root{
     font-size: 16px;
 }
@@ -491,7 +488,7 @@ h2{
    background-color: transparent;
     border: none;
     top: -58px;
-    text-indent: -9999px;
+    font-size: 0;
     background-repeat: no-repeat;
     background-position: center center;
     display: block;
@@ -519,7 +516,7 @@ h2{
 }
 
 .section-city{
-
+margin-bottom: 149px;
 }
 .city{
     &-text{
@@ -666,64 +663,100 @@ h2{
 
 }
 .section-plan{
+    margin-bottom: 138px;
 
 }
     .plan{
         &-text{
             text-align: center;
             margin: 0 auto;
-            max-width: 515px;
+            max-width: 700px;
             &__title{
-                margin-bottom: 33px;
+                margin-bottom: 26px;
             }
             &__description {
-                margin-bottom: 81px;
+                margin-bottom: 63px;
             }
         }
     }
 .plan-tabs{
-    position: relative;
-    background-image: none !important;
-    background-color: transparent !important; 
-    border: none !important;
-    box-shadow: none !important;
+    overflow: scroll;
+    scrollbar-width: thin;
+  scrollbar-color: blue orange;
     &__1{
         background-image: url(../img/plan.png)!important;
         background-repeat: no-repeat !important;
         background-position: center center !important;
         height: 630px;
-        width: 100%;
+        width: 1920px;
+        position: relative;
     }
     &__2{
         background-image: url(../img/plan.png) !important;
-        background-repeat: no-repeat;
-        background-position: center center;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
         height: 630px;
-        width: 100%;
+        width: 1920px;
     }
     &__list{
         display: flex;
         justify-content: center;
-        background-image: none !important;
-        background-color: transparent !important; 
-        border: none !important;
-        box-shadow: none !important;
+        align-items: center;
+        margin-bottom: 52px !important;
         &-item{
-            border: none !important;
-            background-color: transparent !important;
-            background-image: none !important;
-            list-style-type: none !important;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        &-link{
-            border: none !important;
-            background-color: transparent !important;
-            font-size: 1.12rem;
-            color: $gray;
+            margin-left: 36px !important;
+            &:first-child{
+                margin-left: 0 !important;
+            }
 
         }
+        &-line{
+            display: block;
+            height: 25px;
+            width: 1px;
+            background-color: $gray;
+        }
     }
+}
+.ui-tabs{
+    position: relative;
+    background-image: none;
+    background-color: transparent; 
+    border: none !important;
+    box-shadow: none;
+}
+.ui-tabs-nav{
+    background-image: none;
+    background-color: transparent; 
+    border: none ;
+    box-shadow: none ;
+
+}
+.ui-tabs-tab{
+    border: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    list-style-type: none !important;
+    margin-top: 0 !important;
+
+}
+.ui-tabs-active{
+    color: $gray !important;
+    padding: 0 !important;
+    color: $gray-hover !important;
+    &:hover{
+        color: $gray !important;
+    }
+
+}
+.ui-tabs-anchor{
+    border: none;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.12rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
 }
 .coment{
     position: absolute;
@@ -780,11 +813,11 @@ h2{
     .coment-1{
         bottom: 253px;
         left: 442px;
-        h3{
+        .coment-item__title{
             padding-top: 16px;
         }
         &-link{
-            width: 191px;
+            width: 246px;
             height: 165px;
             right: -41px;
             bottom: -193px;
@@ -792,7 +825,7 @@ h2{
 
     }
     .coment-2{
-        top: 171px;
+        top: 223px;
         left: 297px;
         &-link{
                 width: 191px;
@@ -802,17 +835,17 @@ h2{
     }
 }
     .coment-3{
-        top: 56px;
+        top: 10px;
         left: 46.5%;
         &-link{
             width: 191px;
             height: 85px;
             right: -12px;
-            bottom: -92px;
+            bottom: -114px;
     }
 }
     .coment-4{
-        top: 79px;
+        top: 31px;
         left: 59%;
         &-link{
             width: 191px;
@@ -822,7 +855,7 @@ h2{
     }
 }
     .coment-5{
-        top: 43px;
+        top: 5px;
         left: 83%;
         &-link{
             width: 191px;
@@ -831,4 +864,75 @@ h2{
             bottom: -169px;
     }
 }
+.section-about{
 
+}
+.about{
+    &-text{
+        text-align: center;
+        margin: 0 auto;
+        max-width: 670px;
+        &__title{
+            margin-bottom: 26px;
+        }
+        &__description {
+            margin-bottom: 63px;
+        }
+    }
+
+}
+.about-list{
+    display: flex;
+    align-items: center;
+    max-width: 1347px;
+    padding-left: 40px;
+    margin-top: 166px;
+    &__item{
+        list-style-type: none;
+        position: relative;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.138rem;
+        line-height: 17px;
+        text-align: center;
+        min-height: 40px;
+        text-transform: uppercase;
+        flex-basis: 25%;
+    &::before{
+        content: '';
+        content: '';
+        position: absolute;
+        top: -85px;
+        left: calc(50% - 32px);
+        width: 65px;
+        height: 65px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    }
+    &__sketch{
+        &::before{
+            background-image: url(../img/about/sketch.svg);
+        }
+
+    }
+    &__price{
+        &::before{
+            background-image: url(../img/about/price.svg);
+        }
+        
+    }
+    &__time{
+        &::before{
+            background-image: url(../img/about/time.svg);
+        }
+        
+    }
+    &__quality{
+        &::before{
+            background-image: url(../img/about/quality.svg);
+        }
+        
+    }
+
+}
