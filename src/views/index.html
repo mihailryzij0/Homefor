@@ -86,21 +86,24 @@
                     </select>
                 </div>
                 <div class="form-item form-price">
-                    <div>
+                    <div class="form-item__left">
                         <label class=" form-item__label form-item__square" for="name" pattern="m2">Площадь</label>
-                        <input class="form-item__input" type="text" name="name" />
+                        <input class="form-item__input amount-1" type="text" name="name" />
+                        <div id="slider-range-min-1"></div>
+                        <ul class="form-item__numbers">
+                            <li>0</li>
+                            <li>1000</li>
+                        </ul>
                     </div>
-                    <div class="">
+                    <div class="form-item__right">
                         <label class="form-item__label" for="name">Цена за</label>
-                        <input class="form-item__input" type="text" name="name" />
+                        <input class="form-item__input amount-2" type="text" name="name" />
+                        <div id="slider-range-min-2"></div>
+                        <ul class="form-item__numbers">
+                            <li>0</li>
+                            <li>98000</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="form-item form-sliders">
-                    <div class="form-item__slider"></div>
-                    <div>
-                        <div class="form-item__slider"></div>
-                    </div>
-
                 </div>
                 <div class="form-item form-button">
                     <button class="btn-close">Сбросить фильтры</button>
@@ -538,10 +541,11 @@
     <sectiomn class="section-news">
         <div class="wrapper">
             <div class="news">
-                <div class="about-text">
+                <div class="news-text">
                     <h2 class="news-text__title">Наши новости</h2>
                     <p class="news-text__description">Узнай новости компании первым. Мы всегда остаемся в тренде.</p>
                 </div>
+                <span class="news-line"></span>
                 <div class="slider">
                     <div class="slider-child slider-child__1" onclick="location.href='#'">
                         <div class="slider-child__content">
@@ -550,6 +554,17 @@
                                 законе долевого строительства ФЗ-214 для решения сложной задачи – строительства 120 млн
                                 квадратных метров жилья нового качества и усиления контроля </p>
                             <a href="" class="slider-child__content-link">Смотреть больше</a>
+                            <svg class="slider-child__content-arrow" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 512.002 512.002" fill="currentColor" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+			L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+			l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+                                    </g>
+                            </svg>
+
                         </div>
                     </div>
                     <div class="slider-child slider-child__2" onclick="location.href='#'">
@@ -559,6 +574,16 @@
                                 законе долевого строительства ФЗ-214 для решения сложной задачи – строительства 120 млн
                                 квадратных метров жилья нового качества и усиления контроля </p>
                             <a href="" class="slider-child__content-link">Смотреть больше</a>
+                            <svg class="slider-child__content-arrow" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 512.002 512.002" fill="currentColor" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+        L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+        l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+                                    </g>
+                            </svg>
                         </div>
                     </div>
                     <div class="slider-child slider-child__3" onclick="location.href='#'">
@@ -568,6 +593,16 @@
                                 законе долевого строительства ФЗ-214 для решения сложной задачи – строительства 120 млн
                                 квадратных метров жилья нового качества и усиления контроля </p>
                             <a href="" class="slider-child__content-link">Смотреть больше</a>
+                            <svg class="slider-child__content-arrow" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 512.002 512.002" fill="currentColor" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+        L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+        l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+                                    </g>
+                            </svg>
                         </div>
                     </div>
                     <div class="slider-child slider-child__1" onclick="location.href='#'">
@@ -577,6 +612,17 @@
                                 законе долевого строительства ФЗ-214 для решения сложной задачи – строительства 120 млн
                                 квадратных метров жилья нового качества и усиления контроля </p>
                             <a href="" class="slider-child__content-link">Смотреть больше</a>
+                            <svg class="slider-child__content-arrow" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 512.002 512.002" fill="currentColor" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+			L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+			l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+                                    </g>
+                            </svg>
+
                         </div>
                     </div>
                     <div class="slider-child slider-child__2" onclick="location.href='#'">
@@ -586,6 +632,16 @@
                                 законе долевого строительства ФЗ-214 для решения сложной задачи – строительства 120 млн
                                 квадратных метров жилья нового качества и усиления контроля </p>
                             <a href="" class="slider-child__content-link">Смотреть больше</a>
+                            <svg class="slider-child__content-arrow" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 512.002 512.002" fill="currentColor" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+        L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+        l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+                                    </g>
+                            </svg>
                         </div>
                     </div>
                     <div class="slider-child slider-child__3" onclick="location.href='#'">
@@ -595,10 +651,18 @@
                                 законе долевого строительства ФЗ-214 для решения сложной задачи – строительства 120 млн
                                 квадратных метров жилья нового качества и усиления контроля </p>
                             <a href="" class="slider-child__content-link">Смотреть больше</a>
+                            <svg class="slider-child__content-arrow" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 512.002 512.002" fill="currentColor" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+        L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+        l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z" />
+                                    </g>
+                            </svg>
                         </div>
                     </div>
-                
-
                 </div>
             </div>
         </div>
@@ -661,56 +725,31 @@
         $(function () {
             $(".plan-tabs").tabs();
         });
-
-        function collision($div1, $div2) {
-            var x1 = $div1.offset().left;
-            var w1 = 40;
-            var r1 = x1 + w1;
-            var x2 = $div2.offset().left;
-            var w2 = 40;
-            var r2 = x2 + w2;
-
-            if (r1 < x2 || x1 > r2) return false;
-            return true;
-
-        }
-
-
-        $('.form-item__slider').slider({
-            range: true,
-            min: 0,
-            max: 500,
-            values: [75, 300],
-            slide: function (event, ui) {
-
-                $('.ui-slider-handle:eq(0) .price-range-min').html('$' + ui.values[0]);
-                $('.ui-slider-handle:eq(1) .price-range-max').html('$' + ui.values[1]);
-                $('.price-range-both').html('<i>$' + ui.values[0] + ' - </i>$' + ui.values[1]);
-
-
-                if (ui.values[0] == ui.values[1]) {
-                    $('.price-range-both i').css('display', 'none');
-                } else {
-                    $('.price-range-both i').css('display', 'inline');
+        $(function () {
+            $("#slider-range-min-1").slider({
+                range: "min",
+                value: 37,
+                min: 1,
+                max: 700,
+                slide: function (event, ui) {
+                    $(".amount-1").val("$" + ui.value);
                 }
-
-
-                if (collision($('.price-range-min'), $('.price-range-max')) == true) {
-                    $('.price-range-min, .price-range-max').css('opacity', '1');
-                    $('.price-range-both').css('display', 'block');
-                } else {
-                    $('.price-range-min, .price-range-max').css('opacity', '1');
-                    $('.price-range-both').css('display', 'none');
+            });
+            $(".amount-1").val("$" + $("#slider-range-min-1").slider("value"));
+        });
+        $(function () {
+            $("#slider-range-min-2").slider({
+                range: "min",
+                value: 37,
+                min: 1,
+                max: 700,
+                slide: function (event, ui) {
+                    $(".amount-2").val("$" + ui.value);
                 }
-
-            }
+            });
+            $(".amount-2").val("$" + $("#slider-range-min-2").slider("value"));
         });
 
-        $('.ui-slider-range').append('<span class="price-range-both value"><i>$' + $('.form-item__slider').slider('values', 0) + ' - </i>' + $('.form-item__slider').slider('values', 1) + '</span>');
-
-        $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">$' + $('.form-item__slider').slider('values', 0) + '</span>');
-
-        $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">$' + $('.form-item__slider').slider('values', 1) + '</span>');
     </script>
     <script src="js/main.js"></script>
     <script src="js/vendor.js"></script>
