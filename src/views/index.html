@@ -698,10 +698,10 @@
             slidesToScroll: 3,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1000,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
                         infinite: true,
                         dots: true
                     }
@@ -728,26 +728,26 @@
         $(function () {
             $("#slider-range-min-1").slider({
                 range: "min",
-                value: 37,
+                value: 120,
                 min: 1,
-                max: 700,
+                max: 1000,
                 slide: function (event, ui) {
-                    $(".amount-1").val("$" + ui.value);
+                    $(".amount-1").val(ui.value + " м2");
                 }
             });
-            $(".amount-1").val("$" + $("#slider-range-min-1").slider("value"));
+            $(".amount-1").val($("#slider-range-min-1").slider("value") + " м2");
         });
         $(function () {
             $("#slider-range-min-2").slider({
                 range: "min",
-                value: 37,
+                value: 10350,
                 min: 1,
-                max: 700,
+                max: 98000,
                 slide: function (event, ui) {
-                    $(".amount-2").val("$" + ui.value);
+                    $(".amount-2").val(ui.value + " тыс." );
                 }
             });
-            $(".amount-2").val("$" + $("#slider-range-min-2").slider("value"));
+            $(".amount-2").val( $("#slider-range-min-2").slider("value") + " тыс.");
         });
 
     </script>

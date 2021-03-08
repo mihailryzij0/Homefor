@@ -15,9 +15,18 @@
 .nav{
     display: flex;
     margin-left: 71px;
+       @media (max-width:1440px) {
+            margin-left: 0;
+            
+        }
     &-item{
         list-style-type: none;
         margin-left: 17px;
+        @media (max-width:1000px) {
+            margin-left: 0;
+            
+        }
+
     }
     &-link{
          text-decoration: none;
@@ -48,6 +57,9 @@
         text-decoration: none;
         color: $white;
         transition: 0.2s ease;
+        @media (max-width:1200px) {
+            display: none;
+        }
         &:hover{
             color: $gray-hover;
             text-decoration: none;
@@ -72,6 +84,24 @@
         margin-left: 95px;
         transition: 0.2s ease;
         letter-spacing: 0.030rem;
+        @media (max-width:1200px) {
+            margin-left: 0;
+        }
+        @media (max-width:1000px) {
+            font-size: 0;
+            background-image: url(../../../img/telephone.svg);
+            background-color: $white;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 27px auto;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+
         &:hover{
             color: $gray-hover;
             text-decoration: none;
@@ -86,6 +116,9 @@
             height: 30px;
             left: -35px;
             top: calc(50% - 10px);
+            @media (max-width:1000px) {
+               display: none;
+            }
 
         }
     }
@@ -95,9 +128,13 @@
     background-color: transparent;
     border: none;
     width: 50px;
-    height: 24px;
+    height: 26px;
     left: 23px;
     top: 5px;
+    @media (max-width:1440px) {
+        display: none;
+        
+    }
     &:hover{
         background-color: transparent;
     }

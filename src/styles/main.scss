@@ -11,9 +11,18 @@ body {
 :root {
     font-size: 16px;
 }
+* {
+    outline: 1px solid red;
+    }
 .wrapper {
     max-width: 1430px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (max-width:1440px) {
+        max-width: 1140px;
+        
+    }
 }
 h2 {
     font-size: 2.5rem;
@@ -46,6 +55,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 41px;
+    max-width: 99%;
 }
 .main {
     &-content {
@@ -62,6 +72,11 @@ h2 {
             letter-spacing: 0.005em;
             width: 850px;
             margin-bottom: 31px;
+            @media (max-width:1000px) {
+                font-size: 2.7rem;
+                width: 660px;
+                
+            }
         }
         &__description {
             width: 550px;
@@ -235,18 +250,35 @@ button:focus,
         font-size: 1rem;
         padding: 17px 88px;
         min-width: 251px;
+        @media (max-width:1000px) {
+            padding: 17px 48px;
+            min-width: 118px;
+            
+        }
     }
     &__input {
         height: 61px;
         border: 1px solid;
         width: 245px;
+        text-align: center;
+
+
+    }
+    &__left{
+        margin-bottom: 40px;
+
     }
 }
 .form-price {
     display: flex;
     justify-content: space-between;
     width: 1000px;
-    margin-bottom: 27px;
+    margin-bottom: 60px;
+    @media (max-width:1000px) {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
 }
 .ui-slider{
     height: 2px;
@@ -255,20 +287,46 @@ button:focus,
     border: none !important;
     border-radius: 0;
     margin-left: 62px;
+    margin-top: 24px;
+    @media (max-width:1000px) {
+        margin-left: 13px;
+    }
     &-handle{
-        width: 6px!important;
-        height: 6px!important;
-        background-color: $gray!important;
+        width: 7px !important;
+        height: 7px !important;
+        background-color:  $gray !important;
         background-image: none !important;
         border-radius: 0;
-        top: calc(50% - 3px);
+        top: calc(50% - 3px) !important;
+        border: none !important;
+        &:hover{
+            width: 7px !important;
+            height: 7px !important;
+            background-color:  $gray !important;
+            background-image: none !important;
+            border-radius: 0;
+            top: calc(50% - 3px) !important;
+            border: none !important;
+
+        }
+        &:focus{
+            width: 7px !important;
+            height: 7px !important;
+            background-color:  $gray!important;
+            background-image: none !important;
+            border-radius: 0;
+            top: calc(50% - 3px) !important;
+            border: none !important;
+            outline: none;
+
+        }
 
 
     }
 }
     .ui-slider-range-min{
         height: 2px;
-        background-color: $gray;
+        background-color: $gray-hover;
         border: none !important;
         border-radius: 0;
         background-image: none !important;
@@ -282,6 +340,10 @@ button:focus,
     position: absolute;
     width: 365px;
     margin-left: 63px;
+    @media (max-width:1000px) {
+        margin-left: 13px;
+    }
+   
 }
 .form-button {
     display: flex;
@@ -344,7 +406,7 @@ button:focus,
     &-line {
         display: block;
         height: 1px;
-        width: 1290px;
+        width: 87%;
         background-color: #827686;
         opacity: 0.5;
         margin-left: 7px;
@@ -360,11 +422,23 @@ button:focus,
         width: 400px;
         background-color: transparent;
         margin-right: 43px;
+        @media (max-width:1440px) {
+            width: 269px
+            
+        }
+        @media (max-width:1000px) {
+            display: none;
+            
+        }
     }
     .slick-active button {
         height: 2px;
         width: 400px;
         background-color: $gray;
+        @media (max-width:1440px) {
+            width: 269px
+            
+        }
     }
 }
 .slider-item {
@@ -525,17 +599,23 @@ button:focus,
     flex-wrap: wrap;
     margin-right: -20px;
     margin-bottom: 55px;
+    @media (max-width:1440px) {
+        margin-right: 0;
+    }
 }
 .catalog-item {
     min-height: 550px;
     position: relative;
     border: 1px solid $gray;
     cursor: pointer;
-    flex-basis: 463px;
+    flex-basis: 450px;
     margin-right: 20px;
     margin-bottom: 20px;
     overflow: hidden;
     box-sizing: border-box;
+    @media (max-width:1440px) {
+        margin: 20px auto;
+    }
     &__text {
         position: absolute;
         left: 29px;
@@ -580,6 +660,10 @@ button:focus,
     .like {
         right: -363px;
         top: -72px;
+        @media (max-width:1000px) {
+            right: -330px;
+            top: -72px;
+        }
     }
 }
 
@@ -632,13 +716,15 @@ button:focus,
     padding-right: 22px;
     &::before {
         content: "";
+        content: "";
         position: absolute;
-        top: calc(50% - 6px);
+        top: calc(50% - 5px);
         right: -1px;
-        width: 12px;
-        height: 14px;
+        width: 14px;
+        height: 20px;
         background-image: url(../img/arrow.svg);
-        background-size: cover;
+        background-size: 16px 14px;
+        background-repeat: no-repeat;
     }
     &:hover {
         color: $gray-hover;
@@ -661,9 +747,20 @@ button:focus,
     }
 }
 .plan-tabs {
-    overflow: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: blue orange;
+    overflow-x: scroll;
+    scrollbar-width: 5px;
+    scrollbar-color: $gray $gray-hover;
+    &::-webkit-scrollbar {
+        height: 12px;
+        width: 12px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $gray-hover;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray;
+      }
+      
     &__1 {
         background-image: url(../img/plan.png) !important;
         background-repeat: no-repeat !important;
@@ -671,6 +768,11 @@ button:focus,
         height: 630px;
         width: 1920px;
         position: relative;
+        @media (max-width:1000px) {
+            background-size: cover !important;
+            width: 1000px;
+            height: 320px;
+        }
     }
     &__2 {
         background-image: url(../img/plan.png) !important;
@@ -744,6 +846,10 @@ button:focus,
         text-align: center;
         background-color: $gray;
         color: $white;
+        @media (max-width:1000px) {
+            width: 130px;
+            height: 42px;
+        }
         &:before {
             content: " ";
             position: absolute;
@@ -756,6 +862,10 @@ button:focus,
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
             border-top: 30px solid #302d32;
+            @media (max-width:1000px) {
+                left: 68px;
+                top: 33px;
+            }
         }
         &__title {
             font-size: 0.75rem;
@@ -772,6 +882,9 @@ button:focus,
         position: absolute;
         display: block;
         transition: 0.2s ease;
+        @media (max-width:1000px) {
+            display: none;
+        }
         &:hover {
             background-color: $gray-hover;
             opacity: 0.5;
@@ -781,14 +894,26 @@ button:focus,
 .coment-item-1 {
     height: 80px;
     width: 160px;
+    @media (max-width:1000px) {
+        height: 80px;
+        width: 160px;
+    }
     &::before {
         left: 124px;
         top: 76px;
+        @media (max-width:1000px) {
+            left: 34px;
+            top: 76px;
+        }
     }
 }
 .coment-1 {
     bottom: 253px;
     left: 442px;
+    @media (max-width:1000px) {
+        bottom: 129px;
+        left: 232px;
+    }
     .coment-item__title {
         padding-top: 16px;
     }
@@ -802,6 +927,10 @@ button:focus,
 .coment-2 {
     top: 138px;
     left: 297px;
+    @media (max-width:1000px) {
+        top: 33px;
+        left: 89px;
+    }
     &-link {
         width: 191px;
         height: 134px;
@@ -812,6 +941,10 @@ button:focus,
 .coment-3 {
     top: 10px;
     left: 46.5%;
+    @media (max-width:1000px) {
+        top: 0;
+        left: 38.5%;
+    }
     &-link {
         width: 191px;
         height: 85px;
@@ -822,6 +955,10 @@ button:focus,
 .coment-4 {
     top: 31px;
     left: 59%;
+    @media (max-width:1000px) {
+        top: 15px;
+        left: 59%;
+    }
     &-link {
         width: 191px;
         height: 165px;
@@ -832,6 +969,10 @@ button:focus,
 .coment-5 {
     top: 5px;
     left: 83%;
+    @media (max-width:1000px) {
+        top: 0;
+        left: 78%;
+    }
     &-link {
         width: 191px;
         height: 165px;
@@ -923,8 +1064,8 @@ button:focus,
     &-line {
         display: block;
         height: 1px;
-        width: 1290px;
-        background-color: #827686;
+        width: 87%;
+        background-color: $gray-hover;
         opacity: 0.5;
         margin-left: 7px;
         margin-bottom: 43px;
@@ -939,6 +1080,10 @@ button:focus,
         width: 400px;
         background-color: transparent;
         margin-right: 43px;
+        @media (max-width:1000px) {
+            display: none;
+            
+        }
     }
     .slick-active button {
         height: 2px;

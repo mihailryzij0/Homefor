@@ -5,11 +5,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width:1000px) {
+            flex-direction: column;
+ 
+        }
         
     }
 }
 .footer-info {
     display: flex;
+    @media (max-width:1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
     &-logo {
         width: 140px;
         height: 30px;
@@ -21,6 +31,11 @@
         display: flex;
         margin-left: 54px;
         padding-top: 10px;
+        @media (max-width:1000px) {
+            margin-left: 0;
+            margin-top: 20px;
+ 
+        }
         &__item {
             list-style-type: none;
             margin-left: 47px;
@@ -41,6 +56,9 @@
         color: $gray;
         transition: 0.2s ease;
         font-weight: 700;
+        @media (max-width:1000px) {
+            margin-top: 20px;
+        }
         &:hover {
             color: $gray-hover;
             text-decoration: none;
@@ -52,6 +70,9 @@
    
     &__label{
         display: block;
+        @media (max-width:1000px) {
+            text-align: center;
+        }
 
     }
     &__input{
@@ -60,6 +81,10 @@
         border: 1px solid $gray;
         color: $gray;
         padding-left: 31px;
+        @media (max-width:1000px) {
+           width: 480px;
+           margin-bottom: 15px;
+        }
         &:hover{
             border: 1px solid $gray-hover;
         }
@@ -80,6 +105,10 @@
         height: 62px;
         transition: 0.2s ease;
         margin-left: -6px;   
+        @media (max-width:1000px) {
+            display: block;
+            margin: 0 auto;
+        }
         &:hover {
             background-color: $gray-hover;
         }    
@@ -88,6 +117,9 @@
     &__text{
         opacity: 0.8;
         padding-top: 16px;
+        @media (max-width:1000px) {
+          text-align: center;
+        }
 
     }
 }
@@ -115,6 +147,12 @@
     &__item{
         list-style-type: none;
         margin-left: 26px;
+        @media (max-width:1000px) {
+           margin-left: 70px;
+           &:first-child{
+               margin-left: 0;
+           }
+        }
     }
     &__link{
         width: 53px;
