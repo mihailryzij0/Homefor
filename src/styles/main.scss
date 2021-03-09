@@ -10,10 +10,13 @@ body {
 }
 :root {
     font-size: 16px;
-}
-* {
-    outline: 1px solid red;
+    @media (max-width:800px) {
+       font-size: 14px;
     }
+    @media (max-width:570px) {
+        font-size: 12px;
+     }
+}
 .wrapper {
     max-width: 1430px;
     margin: 0 auto;
@@ -35,15 +38,31 @@ h2 {
     position: relative;
     border: none;
     transition: 0.2s ease;
+    @media (max-width:800px) {
+       background-color: transparent !important;
+        
+    }
     &-image {
         fill: $white;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        height: 16px;
+        width: 16px;
+        @media (max-width:800px) {
+            fill: $gray;
+            height: 20px;
+            width: 20px;
+             
+         }
     }
     &:hover {
         background-color: $gray-hover !important;
+        @media (max-width:800px) {
+            background-color: transparent !important;
+             
+         }
     }
     &:focus {
         background-color: $gray-hover !important;
@@ -55,7 +74,6 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 41px;
-    max-width: 99%;
 }
 .main {
     &-content {
@@ -74,7 +92,11 @@ h2 {
             margin-bottom: 31px;
             @media (max-width:1000px) {
                 font-size: 2.7rem;
-                width: 660px;
+               max-width: 660px;
+                
+            }
+            @media (max-width:670px) {
+                max-width: 450px;
                 
             }
         }
@@ -83,6 +105,10 @@ h2 {
             color: $white;
             font-weight: 500;
             margin-bottom: 41px;
+            @media (max-width:670px) {
+                max-width: 360px;
+                
+            }
         }
         &__btn {
             background-color: $white;
@@ -151,6 +177,9 @@ button:focus,
 }
 .section-filter {
     margin-bottom: 131px;
+    @media (max-width:440px) {
+        margin-bottom: 58px;
+    }
 }
 .value {
     position: absolute;
@@ -175,6 +204,11 @@ button:focus,
     margin-right: -2.5px;
     margin-left: -2.5px;
     margin-bottom: 30px;
+    @media (max-width:700px) {
+       display: block;
+        
+    }
+    
 
     &:hover {
         background-color: $white;
@@ -204,6 +238,11 @@ button:focus,
     margin-right: 73px;
     margin-top: 12px;
     padding-right: 23px;
+    @media (max-width:440px) {
+        margin-right: 0;
+        padding-right: 41px;
+        
+    }
 
         &:hover {
             color: $gray-hover;
@@ -257,10 +296,22 @@ button:focus,
         }
     }
     &__input {
-        height: 61px;
+        height: 60px;
         border: 1px solid;
         width: 245px;
         text-align: center;
+        @media (max-width:800px) {
+            height: 57px;
+        }
+        @media (max-width:570px) {
+            height: 54px;
+        }
+        @media (max-width:440px) {
+            width: 211px;
+        }
+        @media (max-width:440px) {
+            width: 190px;
+        }
 
 
     }
@@ -290,6 +341,9 @@ button:focus,
     margin-top: 24px;
     @media (max-width:1000px) {
         margin-left: 13px;
+    }
+    @media (max-width:440px) {
+        width: 319px;
     }
     &-handle{
         width: 7px !important;
@@ -343,12 +397,19 @@ button:focus,
     @media (max-width:1000px) {
         margin-left: 13px;
     }
+    @media (max-width:440px) {
+        width: 319px;
+    }
    
 }
 .form-button {
     display: flex;
     justify-content: space-between;
     width: 461px;
+    @media (max-width:440px) {
+        width: 170px;
+        flex-wrap: wrap;
+    }
 }
 .btn-close {
     background-color: transparent;
@@ -358,6 +419,10 @@ button:focus,
     position: relative;
     transition: 0.2s ease;
     flex-basis: 52%;
+    @media (max-width:440px) {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
     &:hover {
         color: $gray-hover;
     }
@@ -370,6 +435,9 @@ button:focus,
         height: 12px;
         background-image: url(../img/close.svg);
         background-size: cover;
+        @media (max-width:440px) {
+            right: 8px;
+        }
     }
 }
 .btn-send {
@@ -383,6 +451,10 @@ button:focus,
     height: 60px;
     transition: 0.2s ease;
     flex-basis: 48%;
+    border: none;
+    @media (max-width:440px) {
+        flex-basis: 100%;
+    }
     &:hover {
         background-color: $gray-hover;
     }
@@ -395,12 +467,18 @@ button:focus,
         text-align: center;
         margin: 0 auto;
         max-width: 576px;
+        @media (max-width: 440px) {
+            max-width: 323px;
+        }
 
         &__title {
             margin-bottom: 31px;
         }
         &__description {
             margin-bottom: 98px;
+            @media (max-width:800px) {
+                margin-bottom: 48px;
+              }
         }
     }
     &-line {
@@ -411,11 +489,30 @@ button:focus,
         opacity: 0.5;
         margin-left: 7px;
         margin-bottom: 43px;
+        @media (max-width:800px) {
+          display: none;
+        }
     }
+    .slider
     .slick-dots {
         padding-bottom: 34px;
         position: absolute;
         top: -48px;
+        @media (max-width:800px) {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            bottom: -72px;
+            top: inherit;
+            left: calc(50% - 47px);
+            
+            
+        }
+        @media (max-width:800px) {
+            left: calc(50% - 78px);
+            
+            
+        }
     }
     .slick-dots button {
         height: 2px;
@@ -430,6 +527,19 @@ button:focus,
             display: none;
             
         }
+        @media (max-width:800px) {
+            text-indent: -9999px;
+            width: 9px;
+            height: 9px;
+            background-color: $gray;
+           opacity: 0.5;
+           outline: none;
+           border: none;
+           margin-left: 5px;
+           margin-right: 5px;
+            padding: 0px;
+            display: block;
+        }
     }
     .slick-active button {
         height: 2px;
@@ -437,6 +547,10 @@ button:focus,
         background-color: $gray;
         @media (max-width:1440px) {
             width: 269px
+            
+        }
+        @media (max-width:800px) {
+            opacity: 1;
             
         }
     }
@@ -447,19 +561,40 @@ button:focus,
     border: 1px solid $gray;
     margin: 0 10px;
     cursor: pointer;
+    @media (max-width:800px) {
+        min-height: 429px;
+        
+    }
+
     &__text {
         position: absolute;
         left: 29px;
         bottom: 4px;
+        @media (max-width:800px) {
+            left: 8px;
+            bottom: 16px;
+            
+        }
         &-title {
             font-size: 1.87rem;
             font-weight: 700;
             color: $white;
             margin-bottom: 8px;
+            @media (max-width:440px) {
+                color: $gray;
+            }
         }
         &-description {
             color: $white;
             margin-bottom: 28px;
+            @media (max-width:800px) {
+                margin-bottom: 8px;
+                margin-bottom: -8px;
+                
+            }
+            @media (max-width:440px) {
+                color: $gray;
+            }
         }
         &-price {
             font-size: 1.87rem;
@@ -476,17 +611,36 @@ button:focus,
         overflow: hidden;
         width: 100%;
         height: 415px;
+        @media (max-width:800px) {
+            width: 100%;
+            height: 300px;
+        }
+        @media (max-width:440px) {
+            height: 230px;
+        }
         &-image {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             object-fit: cover;
+            @media (max-width:800px) {
+                width: 100%;
+                height: 300px;
+            }
+            @media (max-width:440px) {
+                height: 230px;
+            }
         }
     }
     .like {
         right: -363px;
         top: -72px;
+        @media (max-width:800px) {
+            right: -247px;
+            top: 72px;
+        }
+        
         &:hover {
             background-color: $gray-hover !important;
         }
@@ -494,8 +648,8 @@ button:focus,
             background-color: $gray-hover !important;
         }
     }
-}
 
+}
 .slider-list {
     display: flex;
     align-items: center;
@@ -503,6 +657,10 @@ button:focus,
         list-style-type: none;
         position: relative;
         margin-left: 64px;
+        @media (max-width:800px) {
+            margin-left: 47px;
+            
+        }
     }
     &__painting {
         &::before {
@@ -565,6 +723,9 @@ button:focus,
     &:focus {
         outline: none;
     }
+    @media (max-width:800px) {
+        display: none !important;
+    }
 }
 .slick-prev {
     right: 47px;
@@ -578,6 +739,9 @@ button:focus,
 
 .section-city {
     margin-bottom: 149px;
+    @media (max-width: 670px) {
+        margin-bottom: 67px;
+    }
 }
 .city {
     &-text {
@@ -616,19 +780,38 @@ button:focus,
     @media (max-width:1440px) {
         margin: 20px auto;
     }
+    @media (max-width:800px) {
+        min-height: 402px;
+        flex-basis: 338px;
+    }
+    @media (max-width:670px) {
+        flex-basis: 289px;
+    }
     &__text {
         position: absolute;
         left: 29px;
         bottom: 4px;
+        @media (max-width:800px) {
+            left: 11px;
+        }
         &-title {
             font-size: 1.87rem;
             font-weight: 700;
             color: $white;
             margin-bottom: 8px;
+            @media (max-width:440px) {
+                color: $gray;
+            }
         }
         &-description {
             color: $white;
             margin-bottom: 31px;
+            @media (max-width:800px) {
+                margin-bottom: -10px;
+            }
+            @media (max-width:440px) {
+                color: $gray;
+            }
         }
         &-price {
             font-size: 1.87rem;
@@ -642,6 +825,7 @@ button:focus,
         &-like {
             height: 40px !important;
             width: 40px !important;
+
         }
     }
     &__thub {
@@ -649,12 +833,25 @@ button:focus,
         overflow: hidden;
         width: 100%;
         height: 415px;
+        @media (max-width:800px) {
+            height: 300px;
+        }
+        @media (max-width:440px) {
+            height: 236px;
+        }
+
         &-image {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             object-fit: cover;
+            @media (max-width:800px) {
+                height: 300px;
+            }
+            @media (max-width:440px) {
+                height: 256px;
+            }
         }
     }
     .like {
@@ -663,6 +860,15 @@ button:focus,
         @media (max-width:1000px) {
             right: -330px;
             top: -72px;
+        }
+        @media (max-width:800px) {
+            top: inherit;
+            bottom: -34px;
+            right: -250px;
+        }
+        @media (max-width:670px) {
+            bottom: -58px;
+            right: -218px;
         }
     }
 }
@@ -732,17 +938,31 @@ button:focus,
 }
 .section-plan {
     margin-bottom: 138px;
-}
+    @media (max-width:800px) {
+        margin-bottom: 61px;
+    }
+    }
+
 .plan {
     &-text {
         text-align: center;
         margin: 0 auto;
         max-width: 700px;
+        @media (max-width: 670px) {
+            max-width: 469px;
+        }
+        @media (max-width: 440px) {
+            max-width: 323px;
+        }
         &__title {
             margin-bottom: 26px;
         }
         &__description {
             margin-bottom: 63px;
+            @media (max-width:570px) {
+                margin-bottom: 30px;
+                
+            }
         }
     }
 }
@@ -786,10 +1006,18 @@ button:focus,
         justify-content: center;
         align-items: center;
         margin-bottom: 52px !important;
+        @media (max-width:570px) {
+            margin-bottom: 23px !important;
+            
+        }
         &-item {
             margin-left: 36px !important;
             &:first-child {
                 margin-left: 0 !important;
+            }
+            @media (max-width:570px) {
+                margin-left: 0 !important;
+                
             }
         }
         &-line {
@@ -836,6 +1064,10 @@ button:focus,
     font-size: 1.12rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+    @media (max-width:440px) {
+        letter-spacing: 0.1rem;
+        
+    }
 }
 .coment {
     position: absolute;
@@ -982,6 +1214,14 @@ button:focus,
 }
 .section-about {
     margin-bottom: 179px;
+    @media (max-width:800px) {
+        margin-bottom: 85px;
+        
+    }
+    @media (max-width:670px) {
+        margin-bottom: 0px;
+        
+    }
 }
 .about {
     &-text {
@@ -1002,6 +1242,14 @@ button:focus,
     max-width: 1347px;
     padding-left: 40px;
     margin-top: 166px;
+    @media (max-width:800px) {
+        flex-wrap: wrap;
+        
+    }
+    @media (max-width:440px) {
+        color: $gray;
+        padding-left: 0;
+    }
     &__item {
         list-style-type: none;
         position: relative;
@@ -1013,6 +1261,11 @@ button:focus,
         min-height: 40px;
         text-transform: uppercase;
         flex-basis: 25%;
+        @media (max-width:670px) {
+            flex-basis: 50%;
+            padding-bottom: 100px;
+            
+        }
         &::before {
             content: "";
             content: "";
@@ -1050,6 +1303,10 @@ button:focus,
 }
 .news {
     margin-bottom: 204px;
+    @media (max-width:440px) {
+        margin-bottom: 111px;
+          
+      }
     &-text {
         text-align: center;
         margin: 0 auto;
@@ -1059,6 +1316,10 @@ button:focus,
         }
         &__description {
             margin-bottom: 93px;
+            @media (max-width:440px) {
+                margin-bottom: 40px;
+              }
+            
         }
     }
     &-line {
@@ -1069,11 +1330,29 @@ button:focus,
         opacity: 0.5;
         margin-left: 7px;
         margin-bottom: 43px;
+        @media (max-width:800px) {
+          display: none;
+            
+        }
     }
     .slick-dots {
         padding-bottom: 34px;
         position: absolute;
         top: -48px;
+        @media (max-width:800px) {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            bottom: -72px;
+            top: inherit;
+            left: calc(50% - 29px);
+            
+            
+        }
+        @media (max-width:440px) {
+            left: calc(50% - 47px);
+              
+          }
     }
     .slick-dots button {
         height: 2px;
@@ -1084,15 +1363,35 @@ button:focus,
             display: none;
             
         }
+        @media (max-width:800px) {
+            text-indent: -9999px;
+            width: 9px;
+            height: 9px;
+            background-color: $gray;
+           opacity: 0.5;
+           outline: none;
+           border: none;
+           margin-left: 5px;
+           margin-right: 5px;
+            padding: 0px;
+            display: block;
+        }
     }
     .slick-active button {
         height: 2px;
         width: 400px;
         background-color: $gray;
+        @media (max-width:800px) {
+          opacity: 1;
+        }
     }
 }
 .slider {
     margin-left: -10px;
+    @media (max-width:670px){
+        max-width: 356px;
+        margin: 0 auto;
+    }
     &-child {
         position: relative;
         min-height: 400px;
@@ -1102,6 +1401,12 @@ button:focus,
         background-size: cover;
         background-image: url(../img/bg-news.png);
         color: $gray;
+        @media (max-width:800px) {
+            min-height: 375px;
+          }
+          @media (max-width:440px) {
+            min-height: 300px;
+          }
         
         &:hover{
             color: $white;
@@ -1132,6 +1437,10 @@ button:focus,
             bottom: 38px;
             max-width: 370px;
             z-index: 1;
+            @media (max-width:800px) {
+                left: 14px;
+                  
+              }
            
             &-date {
                 font-size: 0.75rem;
